@@ -1,10 +1,10 @@
 
 
-const Info = () => (
+const Info = ({ fish, penguins }) => (
 	<div className="info">
-		<span> 0 fishes </span>
-		<span> 0 penguins </span>
-		<span> Goal: 102/100 fish </span>
+		<span> {fish} fish </span>
+		<span> {penguins} penguins </span>
+		<span> Goal: {fish}/100 fish </span>
 	</div>
 )
 
