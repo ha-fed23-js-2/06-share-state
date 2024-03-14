@@ -1,5 +1,5 @@
 import './App.css'
-import Game from './components/Game.jsx'
+import GameZ from './components/GameZ.jsx'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 			</header>
 			<main>
 
-			<Game />
+			<GameZ />
 
 			</main>
 		</div>
