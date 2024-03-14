@@ -1,5 +1,6 @@
 import './App.css'
 import GameZ from './components/GameZ.jsx'
+import Game from './components/Game.jsx'
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
 			<main>
 
 			<GameZ />
+
+			<Game />
 
 			</main>
 		</div>
