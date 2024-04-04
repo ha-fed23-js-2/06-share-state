@@ -4,10 +4,11 @@ const useGameStore = create(set => ({
 	fish: 0,
 	penguins: 0,
 	penguinCost: 4,
-	// TODO: lägg till managers
+	managers: 0,
+	managerCost: 20,
 
 	goFishing: () => set(state => ({
-		fish: state.fish + 1 + state.penguins
+		fish: state.fish + 1 + state.penguins * (state.managers + 1)
 	})),
 
 	hirePenguin: () => set(state => {
@@ -19,8 +20,17 @@ const useGameStore = create(set => ({
 		} else {
 			return {}
 		}
+	}),
+	hireManager: () => set(state => {
+		if( state.fish >= state.managerCost ) {
+			return {
+				fish: state.fish - state.managerCost,
+				managers: state.managers + 1
+			}
+		} else {
+			return {}  // inga ändringar
+		}
 	})
-	// TODO: lägg till hireManager
 }))
 
 export { useGameStore }
