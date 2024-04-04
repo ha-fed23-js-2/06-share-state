@@ -1,13 +1,17 @@
 
 
-const Controls = ({ goFishing, hirePenguin, penguinCost, fish }) => (
+const Controls = ({ goFishing, hirePenguin, hireManager, penguinCost, managerCost, fish, startOver }) => (
 	<div>
 		<button onClick={goFishing}> Go fishing </button>
 		<button
 			disabled={fish < penguinCost}
-			onClick={hirePenguin}> Hire penguin ({penguinCost} fish) </button>
-		<button> Hire manager (20 fish) </button>
-		<button disabled> Start over </button>
+			onClick={hirePenguin}
+			> Hire penguin ({penguinCost} fish) </button>
+		<button
+			disabled={fish < managerCost}
+			onClick={hireManager}
+			> Hire manager (20 fish) </button>
+		<button onClick={startOver}> Start over </button>
 	</div>
 )
 
